@@ -55,9 +55,6 @@ class Handler extends ExceptionHandler
                     "error" => "Product Model Not Found",
                 ], Response::HTTP_NOT_FOUND);
             }
-        }
-
-        if ($request->expectsJson()) {
             if ($exception instanceof NotFoundHttpException) {
                 return response()->json([
                     "error" => "Incorrect Route",
