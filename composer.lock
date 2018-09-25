@@ -4,9 +4,77 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dee349b135a3a9dadb3c58304af3e2ef",
-    "content-hash": "96e80fb9113b55693045c57cdf763221",
+    "hash": "d9517d23f1c6671a9059da5150641371",
+    "content-hash": "d1e7c880e373a51c51d14f27e3dc270a",
     "packages": [
+        {
+            "name": "arvindkumarbadwal/entrust-mongodb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arvindkumarbadwal/entrust-mongodb.git",
+                "reference": "d508aef882e47177b095edc1c73c0e9a84a4b1b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arvindkumarbadwal/entrust-mongodb/zipball/d508aef882e47177b095edc1c73c0e9a84a4b1b7",
+                "reference": "d508aef882e47177b095edc1c73c0e9a84a4b1b7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "~5.0",
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~4.1",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Arvindkumar\\EntrustMongoDB\\Entrust\\EntrustServiceProvider"
+                    ],
+                    "aliases": {
+                        "EntrustMongoDB": "Arvindkumar\\EntrustMongoDB\\Entrust\\EntrustFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Arvindkumar\\EntrustMongoDB\\": "src/Entrust/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arvindkumar Badwal",
+                    "email": "arvindkumar.b@hotmail.com"
+                }
+            ],
+            "description": "This package provides a flexible way to add Role-based Permissions to Laravel 5 Moloquent",
+            "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
+                "laravel",
+                "moloquent",
+                "mongodb",
+                "permission",
+                "roles"
+            ],
+            "time": "2018-09-24 06:08:17"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.2.1",
@@ -4795,7 +4863,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "arvindkumarbadwal/entrust-mongodb": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
